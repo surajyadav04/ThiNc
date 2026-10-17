@@ -18,24 +18,24 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 transition-all duration-300 py-3 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto h-16 sm:h-18 px-4 sm:px-6 rounded-2xl bg-white/85 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex items-center justify-between">
+    <header className="absolute top-0 inset-x-0 z-50 bg-transparent text-[#111827] transition-all">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Brand Logo matching reference */}
         <Link
           href="/"
-          className="flex items-center group focus:outline-none focus:ring-2 focus:ring-[#03ACED] rounded-xl p-1 transition-transform hover:scale-[1.02]"
+          className="flex items-center group focus:outline-none focus:ring-2 focus:ring-[#03ACED] rounded-lg p-1"
           aria-label="THiNC Traverso Hand Home"
         >
           <ThincLogo theme="light" />
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-7" aria-label="Main Navigation">
+        <nav className="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-semibold text-slate-800 hover:text-[#03ACED] transition-colors focus:outline-none focus:ring-1 focus:ring-[#03ACED] rounded px-1.5 py-1"
+              className="text-sm font-semibold text-slate-800 hover:text-[#03ACED] transition-colors focus:outline-none focus:ring-1 focus:ring-[#03ACED] rounded px-1"
             >
               {link.label}
             </a>
@@ -46,7 +46,7 @@ export default function Header() {
         <div className="hidden sm:flex items-center gap-3">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-[#03ACED] hover:bg-[#0284C7] text-[#080D24] font-bold text-sm px-6 py-2.5 rounded-full shadow-md shadow-[#03ACED]/30 hover:shadow-lg hover:shadow-[#03ACED]/40 transition-all focus:outline-none focus:ring-2 focus:ring-[#03ACED]"
+            className="inline-flex items-center gap-2 bg-[#03ACED] hover:bg-[#0284C7] text-[#080D24] font-semibold text-sm px-6 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-[#03ACED]"
           >
             <span>Contact</span>
             <ArrowRight className="w-4 h-4" />
@@ -55,7 +55,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setSearchOpen(!searchOpen)}
-            className="w-10 h-10 rounded-full border border-slate-300 hover:border-[#03ACED] bg-white flex items-center justify-center text-slate-700 hover:text-[#03ACED] shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[#03ACED]"
+            className="w-10 h-10 rounded-full border border-slate-300/80 hover:border-[#03ACED] bg-white/70 backdrop-blur-sm flex items-center justify-center text-slate-700 hover:text-[#03ACED] transition-colors focus:outline-none focus:ring-2 focus:ring-[#03ACED]"
             aria-label="Search conditions and anatomy"
           >
             <Search className="w-4 h-4" />

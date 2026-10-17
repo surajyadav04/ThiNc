@@ -10,7 +10,7 @@ import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F9FC] selection:bg-[#03ACED] selection:text-[#0A0D24]">
+    <div className="min-h-screen flex flex-col bg-[#0A0E1A] selection:bg-[#03ACED] selection:text-[#0A0D24]">
       {/* Global Header */}
       <Header />
 

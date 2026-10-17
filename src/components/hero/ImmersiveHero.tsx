@@ -384,25 +384,28 @@ export default function ImmersiveHero() {
         ref={stickyRef}
         className="hero-sticky sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between"
       >
-        {/* Fullscreen High-Performance Frame-Sequence Canvas with enhanced brightness */}
+        {/* Fullscreen High-Performance Frame-Sequence Canvas with balanced moderate brightness */}
         <canvas
           ref={canvasRef}
           aria-label="High-resolution anatomical frame sequence of the human hand"
           className="absolute inset-0 w-full h-full z-0 pointer-events-none transition-opacity duration-300"
           style={{
             opacity: firstFrameLoaded ? 1 : 0.85,
-            filter: "brightness(1.12) contrast(1.06)",
+            filter: "brightness(1.04) contrast(1.02)",
           }}
         />
 
-        {/* Crisp luminous white gradient on the left for opening headline readability */}
+        {/* Soft natural gradient wash on the left for opening hero screen */}
         <div
           ref={leftWashRef}
-          className="absolute inset-y-0 left-0 w-full sm:w-2/3 lg:w-1/2 bg-gradient-to-r from-white/90 via-white/70 to-transparent pointer-events-none z-10 will-change-[opacity]"
+          className="absolute inset-y-0 left-0 w-full sm:w-2/3 lg:w-1/2 bg-gradient-to-r from-[#F4F7FB]/90 via-[#F4F7FB]/60 to-transparent pointer-events-none z-10 will-change-[opacity]"
         />
 
-        {/* Ambient atmospheric cyan glow */}
-        <div className="absolute top-1/4 right-[15%] w-[520px] h-[520px] bg-[#03ACED]/25 rounded-full blur-[140px] pointer-events-none z-0" />
+        {/* Dedicated high-contrast deep navy wash for white scroll narration milestones */}
+        <div className="absolute inset-y-0 left-0 w-full sm:w-2/3 lg:w-1/2 bg-gradient-to-r from-[#070B1A]/90 via-[#070B1A]/65 to-transparent pointer-events-none z-10" />
+
+        {/* Soft balanced atmospheric cyan glow */}
+        <div className="absolute top-1/4 right-[15%] w-[460px] h-[460px] bg-[#03ACED]/15 rounded-full blur-[130px] pointer-events-none z-0" />
 
         {/* Main Initial Content Layout (Visible at scroll 0%, fades on scroll) */}
         <div
