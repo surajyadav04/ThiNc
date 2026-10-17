@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --primary-indigo: #1B1464;
+  --dark-indigo: #0A0D24;
+  --cyan-accent: #03ACED;
+  --soft-cyan: #CFF6FB;
+  --bg-clinical: #F7F9FC;
+  --surface-card: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #64748B;
+  --border-subtle: #DCE5EE;
+}
+
+@theme {
+  --color-primary-indigo: #1B1464;
+  --color-dark-indigo: #0A0D24;
+  --color-cyan-accent: #03ACED;
+  --color-soft-cyan: #CFF6FB;
+  --color-bg-clinical: #F7F9FC;
+  --color-surface-card: #FFFFFF;
+  --color-text-primary: #111827;
+  --color-text-secondary: #64748B;
+  --color-border-subtle: #DCE5EE;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-clinical);
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+.font-serif-editorial {
+  font-family: var(--font-instrument-serif), Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* Custom scrollbar for clinical feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0D24;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B1464;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #03ACED;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid #03ACED;
+  outline-offset: 3px;
+}
